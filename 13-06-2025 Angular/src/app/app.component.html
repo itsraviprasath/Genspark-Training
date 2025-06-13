@@ -1,0 +1,9 @@
+<div style="text-align:center">
+  <h1>🌤️ Weather Dashboard</h1>
+  <input [(ngModel)]="city" placeholder="Enter city name" />
+  <button (click)="getWeather()">Get Weather</button>
+
+  <ng-container *ngIf="weather$ | async as weather">
+    <app-weather-card [weather]="weather"></app-weather-card>
+  </ng-container>
+</div>
